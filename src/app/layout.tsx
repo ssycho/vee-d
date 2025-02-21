@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Vee-d",
-    description: "E-commerce app",
+    title: "Vee'd",
+    description: "[Vidy] is an E-commerce app, where you doing your shoping, silly.",
 };
 
 export default function RootLayout({

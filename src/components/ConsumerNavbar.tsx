@@ -12,7 +12,7 @@ export default function ConsumerNavbar() {
                         href="/"
                         className="text-3xl font-bold tracking-widest font-serif"
                     >
-                        Vee-d
+                        Vee&apos;d
                     </Link>
                 </li>
                 <li className="ml-auto">
