@@ -19,10 +19,13 @@ const BANNER_ITEMS = [
 function Banner() {
     const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true }));
     useEffect(() => {
-        toast.message("Welcome to Vee'd 🎉", {
-            description:
-                "This app still is in development and only have mock data.",
-        });
+        setTimeout(() => {
+            toast.message("Welcome to Vee'd 🎉", {
+                description:
+                    "This app is still in development and only have mock data and pictures.",
+                duration: 10_000,
+            });
+        }, 1000);
     }, []);
     return (
         <div className="">
@@ -61,6 +64,7 @@ function Item({ imageUrl }: { imageUrl: string }) {
                         height={2000}
                         alt="product or ads"
                         className="object-cover w-full h-full"
+                        priority
                     />
                 </CardContent>
             </Card>
