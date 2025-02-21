@@ -10,7 +10,7 @@ export default function ConsumerNavbar() {
                 <li>
                     <Link
                         href="/"
-                        className="text-3xl font-bold tracking-widest text-primary font-serif"
+                        className="text-3xl font-bold tracking-widest font-serif"
                     >
                         Vee-d
                     </Link>
