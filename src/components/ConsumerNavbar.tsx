@@ -1,12 +1,24 @@
+import { ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { Button } from "./ui/button";
 
 export default function ConsumerNavbar() {
     return (
-        <nav className="w-full">
-            <ul className="container mx-auto px-4 lg:px-0">
+        <nav className="w-full bg-background sticky top-0 shadow-lg drop-shadow-xl z-40 border-b">
+            <ul className="container mx-auto lg:px-0 flex p-4 py-2 items-center">
                 <li>
-                    <Link href="/">Vee-d</Link>
+                    <Link
+                        href="/"
+                        className="text-3xl font-bold tracking-widest text-primary font-serif"
+                    >
+                        Vee-d
+                    </Link>
+                </li>
+                <li className="ml-auto">
+                    <Button variant="outline" size="icon">
+                        <ShoppingCart />
+                    </Button>
                 </li>
             </ul>
         </nav>
