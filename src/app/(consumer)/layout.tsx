@@ -9,7 +9,7 @@ export default function ConsumerLayout({ children }: Props) {
     return (
         <>
             <ConsumerNavbar />
-            <main className="container mx-auto lg:px-0 px-4">{children}</main>
+            <main className="space-y-8">{children}</main>
         </>
     );
 }

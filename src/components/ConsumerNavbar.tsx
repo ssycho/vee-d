@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 export default function ConsumerNavbar() {
     return (
         <nav className="w-full bg-background sticky top-0 shadow-lg drop-shadow-xl z-40 border-b">
-            <ul className="container mx-auto lg:px-0 flex p-4 py-2 items-center">
+            <ul className="container mx-auto lg:px-0 flex px-6 py-4 items-center">
                 <li>
                     <Link
                         href="/"
