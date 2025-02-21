@@ -40,7 +40,9 @@ function Product({
             <CardFooter className="flex items-center justify-end gap-4">
                 {!!salesPrice ? (
                     <>
-                        <p className="text-xs line-through">${price.toFixed(2)}</p>
+                        <p className="text-xs line-through">
+                            ${price.toFixed(2)}
+                        </p>
                         <Badge variant="default">
                             ${salesPrice.toFixed(2)}
                         </Badge>
