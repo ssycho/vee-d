@@ -23,13 +23,13 @@ function Product({
 }: TProduct) {
     return (
         <Link href={`/product/${slug}`}>
-            <Card className="rounded-sm">
+            <Card className="rounded-sm h-full">
                 <CardHeader>
                     <CardTitle className="flex items-center justify-between">
                         <p>{name}</p>
                         <Badge variant="outline">{category}</Badge>
                     </CardTitle>
-                    <CardDescription>{description}</CardDescription>
+                    <CardDescription className="line-clamp-1">{description}</CardDescription>
                 </CardHeader>
                 <CardContent className="p-0 overflow-hidden">
                     <Image
