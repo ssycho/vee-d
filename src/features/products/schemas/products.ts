@@ -1,6 +1,7 @@
 // this is yet a mock since I'm building the UI first
 export type Product = {
     id: string;
+    slug: string;
     name: string;
     imageUrl: string;
     description: string;
