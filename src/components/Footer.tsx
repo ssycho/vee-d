@@ -13,7 +13,7 @@ function Footer() {
                     target="_blank"
                     className="underline font-medium underline-offset-2 text-primary/70"
                 >
-                    Spycho
+                    Ssycho
                 </Link>
                 .
             </p>
