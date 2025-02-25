@@ -1,7 +1,6 @@
-import { ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { Button } from "./ui/button";
+import CartNavbarButton from "./CartNavbarButton";
 
 export default function ConsumerNavbar() {
     return (
@@ -16,9 +15,7 @@ export default function ConsumerNavbar() {
                     </Link>
                 </li>
                 <li className="ml-auto">
-                    <Button variant="outline" size="icon">
-                        <ShoppingCart />
-                    </Button>
+                    <CartNavbarButton />
                 </li>
             </ul>
         </nav>

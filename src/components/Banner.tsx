@@ -25,7 +25,7 @@ function Banner() {
                     "This app is still in development and only have mock data and pictures.",
                 duration: 10_000,
             });
-        }, 1000);
+        }, 100);
     }, []);
     return (
         <div className="">

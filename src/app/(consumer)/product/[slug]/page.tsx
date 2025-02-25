@@ -1,8 +1,8 @@
+import AddToCart from "@/features/products/compontents/AddToCart";
 import { ALL_PRODUCT } from "@/features/products/mock";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import React from "react";
-import { Button } from "@/components/ui/button";
 
 type Props = {
     params: Promise<{ slug: string }>;
@@ -45,7 +45,7 @@ export default async function ProductPage({ params }: Props) {
                         </p>
                     </div>
                     <div className="">
-                        <Button size="lg">Add to cart</Button>
+                        <AddToCart product={product} />
                     </div>
                 </div>
             </div>
