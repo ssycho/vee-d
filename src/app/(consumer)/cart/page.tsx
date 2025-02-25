@@ -7,18 +7,18 @@ export default async function CartPage() {
     const savedProductIds = await getCart();
     const productIds = savedProductIds.map((product) => product.id);
 
-    const products = ALL_PRODUCT.filter((product) =>
-        productIds.includes(product.id)
-    );
+    const products = productIds
+        .map((id) => ALL_PRODUCT.find((p) => p.id === id))
+        .filter((p) => p !== undefined);
 
     return (
         <div className="space-y-8">
-            <h1 className="text-3xl font-serif font-medium tracking-tight mt-8">
+            <h1 className="text-3xl font-serif font-medium tracking-tight py-8 border-b border-foreground/15">
                 Cart
             </h1>
             <ul className="space-y-4">
-                {products.map((product) => (
-                    <li key={product.id}>
+                {products.map((product, key) => (
+                    <li key={product.id + key}>
                         <Product product={product} />
                     </li>
                 ))}
