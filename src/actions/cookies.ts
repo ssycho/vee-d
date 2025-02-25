@@ -25,3 +25,18 @@ export async function getCart(): Promise<CookieProduct[]> {
 
     return saved ? JSON.parse(saved.value) : [];
 }
+
+export async function removeFromCart(product: CookieProduct) {
+    const cookieStore = await cookies();
+
+    const saved = cookieStore.get("cart");
+
+    const cart: CookieProduct[] = saved ? JSON.parse(saved.value) : [];
+
+    cookieStore.set({
+        name: "cart",
+        value: JSON.stringify(cart.filter((p) => p.id !== product.id)),
+        httpOnly: true,
+        secure: true,
+    });
+}
