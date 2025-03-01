@@ -24,8 +24,15 @@ export const createCartStore = (initState: CartState = defaultInitState) => {
         addProduct: (product) =>
             set((state) => ({ products: [...state.products, product] })),
         removeProduct: (product) =>
-            set((state) => ({
-                products: state.products.filter((p) => p.id !== product.id),
-            })),
+            set((state) => {
+                const productIndex = state.products.findIndex(
+                    (p) => p.id === product.id
+                );
+                const copy = [...state.products];
+                copy.splice(productIndex, 1);
+                return {
+                    products: copy,
+                };
+            }),
     }));
 };

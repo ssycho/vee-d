@@ -33,9 +33,13 @@ export async function removeFromCart(product: CookieProduct) {
 
     const cart: CookieProduct[] = saved ? JSON.parse(saved.value) : [];
 
+    const productIndex = cart.findIndex((p) => p.id === product.id);
+    const copy = [...cart];
+    copy.splice(productIndex, 1);
+
     cookieStore.set({
         name: "cart",
-        value: JSON.stringify(cart.filter((p) => p.id !== product.id)),
+        value: JSON.stringify(copy),
         httpOnly: true,
         secure: true,
     });
